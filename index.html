@@ -27,14 +27,6 @@
 
     <div class="container">
 
-        <!-- Timeblock 1 goes here -->
-        <div class="input-group-1 mb-3">
-            <div class="input-group-prepend">
-                <span id="8" class="input-group-text">08:00PST</span>
-                <input id="input-type-1" type="text" class="form-control"></input>
-                <button id="save-btn-1" class="btn btn-outline-secondary" type="button">Save</button>
-            </div>
-        </div>
         <!-- Timeblock 2 goes here -->
         <div class="input-group-1 mb-3">
             <div class="input-group-prepend">
@@ -46,7 +38,7 @@
         <!-- Timeblock 3 goes here -->
         <div class="input-group-1 mb-3">
             <div class="input-group-prepend">
-                <span id="time-type-10" class="input-group-text">10:00PST</span>
+                <span id="10" class="input-group-text">10:00PST</span>
                 <input id="input-type-3" type="text" class="form-control"></input>
                 <button id="save-btn-3" class="btn btn-outline-secondary" type="button">Save</button>
             </div>
@@ -54,7 +46,7 @@
         <!-- Timeblock 4 goes here -->
         <div class="input-group-1 mb-3">
             <div class="input-group-prepend">
-                <span id="time-type-11" class="input-group-text">11:00PST</span>
+                <span id="11" class="input-group-text">11:00PST</span>
                 <input id="input-type-4" type="text" class="form-control"></input>
                 <button id="save-btn-4" class="btn btn-outline-secondary" type="button">Save</button>
             </div>
@@ -62,7 +54,7 @@
         <!-- Timeblock 5 goes here -->
         <div class="input-group-1 mb-3">
             <div class="input-group-prepend">
-                <span id="time-type-12" class="input-group-text">12:00PST</span>
+                <span id="12" class="input-group-text">12:00PST</span>
                 <input id="input-type-5" type="text" class="form-control"></input>
                 <button id="save-btn-5" class="btn btn-outline-secondary" type="button">Save</button>
             </div>
@@ -70,7 +62,7 @@
         <!-- Timeblock 6 goes here -->
         <div class="input-group-1 mb-3">
             <div class="input-group-prepend">
-                <span id="time-type-13" class="input-group-text">13:00PST</span>
+                <span id="13" class="input-group-text">13:00PST</span>
                 <input id="input-type-6" type="text" class="form-control"></input>
                 <button id="save-btn-6" class="btn btn-outline-secondary" type="button">Save</button>
             </div>
@@ -78,7 +70,7 @@
         <!-- Timeblock 7 goes here -->
         <div class="input-group-1 mb-3">
             <div class="input-group-prepend">
-                <span id="time-type-14" class="input-group-text">14:00PST</span>
+                <span id="14" class="input-group-text">14:00PST</span>
                 <input id="input-type-7" type="text" class="form-control"></input>
                 <button id="save-btn-7" class="btn btn-outline-secondary" type="button">Save</button>
             </div>
@@ -86,7 +78,7 @@
         <!-- Timeblock 8 goes here -->
         <div class="input-group-1 mb-3">
             <div class="input-group-prepend">
-                <span id="time-type-15" class="input-group-text">15:00PST</span>
+                <span id="15" class="input-group-text">15:00PST</span>
                 <input id="input-type-8" type="text" class="form-control">
                 <button id="save-btn-8" class="btn btn-outline-secondary" type="button">Save</button>
             </div>
@@ -94,7 +86,7 @@
         <!-- Timeblock 9 goes here -->
         <div class="input-group-1 mb-3">
             <div class="input-group-prepend">
-                <span id="time-type-16" class="input-group-text">16:00PST</span>
+                <span id="16" class="input-group-text">16:00PST</span>
                 <input id="input-type-9" type="text" class="form-control"></input>
                 <button id="save-btn-9" class="btn btn-outline-secondary" type="button">Save</button>
             </div>
@@ -102,7 +94,7 @@
         <!-- Timeblock 10 goes here -->
         <div class="input-group-1 mb-3">
             <div class="input-group-prepend">
-                <span id="time-type-17" class="input-group-text">17:00PST</span>
+                <span id="17" class="input-group-text">17:00PST</span>
                 <input id="input-type-10" type="text" class="form-control"></input>
                 <button id="save-btn-10" class="btn btn-outline-secondary" type="button">Save</button>
             </div>
@@ -119,41 +111,7 @@
             crossorigin="anonymous"></script>
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-
-        <script>
-            $(document).ready(function () {
-
-                var currentTime = moment().format('llll')
-                var calendarTime = parseInt(moment().format('HH'));
-                
-                console.log("#time-type- " + calendarTime);
-
-              
-
-                $(".time-bar").text(currentTime);
-
-                $(".btn").on("click", function () {
-                    var myValue = $(this).attr('id')
-                    console.log(myValue);
-                    var myInput = $(this).prev().val();
-                    localStorage.setItem("key", myValue);
-                })
-
-
-                // if ($("#9") = calendarTime) {
-                //     console.log("blue")
-                // } 
-
-
-
-            })
-
-            
-
-
-
-
-        </script>
+        <script src="script.js"></script>
 
 
 </body>
